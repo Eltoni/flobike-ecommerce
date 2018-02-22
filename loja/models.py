@@ -4,7 +4,7 @@ from django.db import models
 from django.db import models
 from django.http import HttpResponseRedirect,Http404
 from django.shortcuts import render,reverse
-
+from cloudinary.models import CloudinaryField
 # Create your models here.
 class Categoria(models.Model):
     nome = models.CharField(max_length=200,db_index=True)
@@ -23,7 +23,8 @@ class Produto(models.Model):
     nome = models.CharField(max_length=200, db_index=True)
     slug = models.SlugField(max_length=200, db_index=True)
     #imagem = models.ImageField(upload_to='produtos/%Y/%m/%d',blank=True)
-    imagem = models.ImageField()
+    #imagem = models.ImageField()
+    imagem = CloudinaryField()
     descricao = models.TextField(blank=True)
     preco = models.DecimalField(max_digits=10, decimal_places=2)
     stock = models.PositiveIntegerField()

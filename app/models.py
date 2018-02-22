@@ -1,5 +1,7 @@
 from django.db import models
 from django.db.models import ImageField,SlugField
+from cloudinary.models import CloudinaryField
+
 # Create your models here.
 
 # Model do Carousel
@@ -7,7 +9,8 @@ class Carousel(models.Model):
     """ Serão Inseridos as imagens e os textos no carousel data que vai permanacer """
     titulo = models.CharField(max_length=100)
     texto = models.TextField()
-    imagem = models.ImageField()
+    #imagem = models.ImageField()
+    imagem = CloudinaryField()
     data_inicio = models.DateTimeField(auto_now_add=True)
     data_final = models.DateTimeField()
     def __str__(self):

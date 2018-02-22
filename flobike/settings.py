@@ -79,6 +79,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -90,6 +91,12 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CLOUDINARY = {
+    'cloud_name' : 'dmk21ttn3',
+    'api_key' : '674443318556841',
+    'api_secret': 'KD03NxKL3oFX8KJsyVQ2TaXuH4s'
+}
 
 ROOT_URLCONF = 'flobike.urls'
 
