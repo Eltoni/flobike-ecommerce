@@ -1,0 +1,30 @@
+{% extends "app/base.html" %}
+{% block muda %}
+{% load static %}
+<div class="jumbotron jumbotron-fluid">
+    <div class="row my-2">
+        <div class="col-12 text-center my5">
+            <h2 class="display-5">Falha no Pagamento</h2>
+
+            <div class="container">
+                <div class="col-7 ">
+                  <ul>
+                      <li class="separador"></li>
+
+                  </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="alert alert-danger" role="alert">
+    <div class="container">
+  Infezlimete Houve um erro, Verifique sua conta no PAYPAL e faça o cadastro
+</div>
+</div>
+
+
+  {% endblock muda%}

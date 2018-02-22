@@ -1,0 +1,172 @@
+{% extends "app/base.html" %}
+{% block muda %}
+<div class="jumbotron jumbotron-fluid">
+    <div class="row my-2">
+        <div class="col-12 text-center my5">
+            <h2 class="display-5"><i class="fa fa-id-badge text-info" aria-hidden="true"></i>CONTATO</h2>
+
+            <div class="container">
+                <div class="col-7 ">
+                  <ul>
+                      <li class="separador"></li>
+
+                  </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+      <div class="container ">
+        <div class="row mb-5 ">
+            <div class="col-sm-5 col-md-30 col-lg-8 ">
+              {% if is_valid %}
+
+              <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            <strong>Obrigado Pelo Contato!</strong> Mensagem Enviada!
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+
+
+              {% endif %}
+                <form action="#contato" method="post">
+                    <!--Inicio primeira linha-->
+                    {% csrf_token %}
+                    {% for fi in form %}
+
+
+
+                    <div class="form-row">
+                        <!--form-group= fica dentro de um grupo do form-->
+                        <div class="form-group col-sm-8">
+                          <div class="ml-2">
+                          {{ fi.label_tag }}
+                        </div>
+                      <div class="input-block">
+                        {{ fi }}
+                      </div>
+                        {{ fi.erros }}
+                        </div>
+                    </div>
+
+                    {% endfor %}
+
+
+                  <!---  <div class="form-row">
+
+                        <div class="form-group col-sm-8">
+                          <label for="id_email" > Email</label>
+                          <input type="email" class="form-control" name ="email" id="id_email" placeholder="Seu Email">
+                        </div>
+
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-sm-8">
+                          <label for="inputTelefone"> Telefone </label>
+                          <input type="text" class="form-control" id="inputTelefone" placeholder="Telefone">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-sm-8">
+                          <label  for="id_mensagem" >Mensagem</label>
+                          <textarea class="form-control" name="mensagem" id="id_mensagem" rows="3"></textarea>
+                        </div>
+                    </div>-->
+                    <!--fim Terceira linha
+                    <div class="form-row">
+                        <div class="form-group col-sm-12">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input class="form-check-input" type="checkbox"> Desejar Receber Novidadades por e-mail
+                                    </label>
+                                </div>
+                          </div>
+                    </div>-->
+                    <!--Linha dos Botões-->
+                    <div class="form-row justify-content-center">
+                        <div class="col-sm-12">
+                          <button type="submit" class="btn btn-primary">Enviar</button>
+                          <!--Botao do popover-->
+                          <a class="btn btn-secondary ml-2" tabindex="0" role="button"
+                          data-toggle="popover" data-placement="right" data-trigger="focus"
+                          title="Ajudando Vocẽ" data-content="ETYDVhsgvjsdagvfgesdkfgsdjhvbhj">
+                            Ajuda
+                          </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+<!----->
+<div class="col-sm-3">
+    <h5> Dados</h5>
+      <div class="jumbotron">
+        <div class="row">
+          <p>eltoni.guimaraes@gmail.com</p>
+        </div>
+          <div class="row">
+            <p>+ 55 899 94-00-00-00</p>
+          </div>
+
+          <div class="row">
+              <p class="ml-2">Floriano-PI Brasil</p>
+          </div>
+
+          <div class="row">
+              <p class="ml-2">Social</p>
+          </div>
+
+          <div class="row">
+
+            <div class="col-sm-2">
+
+                <!--btn-block=deixa a div ocupar todo espaço do container || btn-group-lg= deixa mais largo os botões-->
+                <div class="btn-group" role="group">
+                      <a href="#" class="btn btn-outline-primary"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                      <a href="#" class="btn btn-outline-secondary"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                      <a href="#" class="btn btn-outline-primary"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+          </div>
+
+      </div>
+  </div>
+<!---->
+
+
+
+
+            </div>
+
+
+
+
+              <div class="jumbotron">
+                  <h1 class="display-4">Hello, world!</h1>
+                  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                  <hr class="my-4">
+                  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                  <p class="lead">
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                  </p>
+              </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+  {% endblock muda %}

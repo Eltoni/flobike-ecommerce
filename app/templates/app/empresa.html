@@ -1,0 +1,122 @@
+{% extends "app/base.html" %}
+{% block muda %}
+{% load static %}
+<div class="jumbotron jumbotron-fluid">
+    <div class="row my-2">
+        <div class="col-12 text-center my5">
+            <h2 class="display-5">MISSÕES, VISÕES E VALORES</h2>
+
+            <div class="container">
+                <div class="col-7 ">
+                  <ul>
+                      <li class="separador"></li>
+
+                  </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+  <!-- Div do scrollspy mb=margem bottom-->
+  <div class="row mb-5">
+    <!-- Coluna do meu vertical col-sm-6= deixa as colulas alinhada certinha quando é diminuida a tela ou está no browser do navegador-->
+      <div class="col-sm-6 col-md-4 mb-3">
+          <!-- navbar principal -->
+          <nav id="navbarVertical" class="navbar navbar-light bg-light">
+            <!-- navbar Secundario -->
+              <nav class="nav nav-pills flex-column">
+                <a class="nav-link"href="#item1">O primeiro circuito</a>
+
+                <a class="nav-link my-2" href="#item2">Ciclo Abraços</a>
+                  <!-- navbar Secundario do Secundario-->
+                  <nav class="nav nav-pills flex-column">
+                    <!-- ml da um espacamento para perceber q os "a" são subtopicos-->
+                    <a class="nav-link ml-3" href="#item2-1">Percursos</a>
+                    <a class="nav-link ml-3" href="#item2-2">Profissionalismo</a>
+                  </nav>
+                  <!-- Fim navbar Secundario do Secundario-->
+
+                <a class="nav-link my-2" href="#item3">Teste</a>
+
+              </nav>
+              <!-- Fim navbar Secundario -->
+          </nav>
+          <!-- Fim navbar principal-->
+
+      </div>
+      <!-- Fim da Coluna do meu vertical|| a tag abaixo o col-md-8 deixa a coluna alinhada com os cards-->
+      <div class="col-sm-6 col-md-8">
+        <!-- A clss scrollSite é defina no style.scss para colocar o texto relative e mudar a largura desta coluna-->
+          <div data-spy="scroll" data-target="#navbarVertical" data-offset="0" class="scrollSite">
+
+              <h4 id="item1">O primeiro circuito</h4>
+              <p>9 Dicas para pedalar com mais segurança Vai sair para pedalar pelas ciclovias ou no trânsito da cidade ?
+                Aprenda a usar o pedal defensivo e olho no caminho Fonte: Prólogo Ativo A exemplo do que ocorreu há décadas em alguns países
+                da Europa e América do Norte, o uso da bicicleta como alternativa para o transporte
+                urbano vem crescendo no Brasil nos últimos anos.  O trânsito caótico de automóveis nos centros urbanos e o caráter sustentável...</p>
+
+              <h4 id="item2">Ciclo Abraços</h4>
+              <p>9 Dicas para pedalar com mais segurança Vai sair para pedalar pelas ciclovias ou no trânsito da cidade ?
+                Aprenda a usar o pedal defensivo e olho no caminho Fonte: Prólogo Ativo A exemplo do que ocorreu há décadas em alguns países
+                da Europa e América do Norte, o uso da bicicleta como alternativa para o transporte
+                urbano vem crescendo no Brasil nos últimos anos.  O trânsito caótico de automóveis nos centros urbanos e o caráter sustentável...</p>
+
+                    <h5 id="item2-1">Teste 1</h5>
+                    <p>9 Dicas para pedalar com mais segurança Vai sair para pedalar pelas ciclovias ou no trânsito da cidade ?
+                      Aprenda a usar o pedal defensivo e olho no caminho Fonte: Prólogo Ativo A exemplo do que ocorreu há décadas em alguns países
+                      da Europa e América do Norte, o uso da bicicleta como alternativa para o transporte
+                      urbano vem crescendo no Brasil nos últimos anos.  O trânsito caótico de automóveis nos centros urbanos e o caráter sustentável...
+                      9 Dicas para pedalar com mais segurança Vai sair para pedalar pelas ciclovias ou no trânsito da cidade ?
+                        Aprenda a usar o pedal defensivo e olho no caminho Fonte: Prólogo Ativo A exemplo do que ocorreu há décadas em alguns países
+                        da Europa e América do Norte, o uso da bicicleta como alternativa para o transporte
+                        urbano vem crescendo no Brasil nos últimos anos.  O trânsito caótico de automóveis nos centros urbanos e o caráter sustentável...
+                        9 Dicas para pedalar com mais segurança Vai sair para pedalar pelas ciclovias ou no trânsito da cidade ?
+                      Aprenda a usar o pedal defensivo e olho no caminho Fonte: Prólogo Ativo A exemplo do que ocorreu há décadas em alguns países
+                      da Europa e América do Norte, o uso da bicicleta como alternativa para o transporte
+                      urbano vem crescendo no Brasil nos últimos anos.  O trânsito caótico de automóveis nos centros urbanos e o caráter sustentável...</p>
+
+                    <h5 id="item2-2">Teste 2</h5>
+                    <p>9 Dicas para pedalar com mais segurança Vai sair para pedalar pelas ciclovias ou no trânsito da cidade ?
+                      Aprenda a usar o pedal defensivo e olho no caminho Fonte: Prólogo Ativo A exemplo do que ocorreu há décadas em alguns países
+                      da Europa e América do Norte, o uso da bicicleta como alternativa para o transporte
+                      urbano vem crescendo no Brasil nos últimos anos.  O trânsito caótico de automóveis nos centros urbanos e o caráter sustentável...
+                      9 Dicas para pedalar com mais segurança Vai sair para pedalar pelas ciclovias ou no trânsito da cidade ?
+                        Aprenda a usar o pedal defensivo e olho no caminho Fonte: Prólogo Ativo A exemplo do que ocorreu há décadas em alguns países
+                        da Europa e América do Norte, o uso da bicicleta como alternativa para o transporte
+                        urbano vem crescendo no Brasil nos últimos anos.  O trânsito caótico de automóveis nos centros urbanos e o caráter sustentável...
+                        9 Dicas para pedalar com mais segurança Vai sair para pedalar pelas ciclovias ou no trânsito da cidade ?
+                      Aprenda a usar o pedal defensivo e olho no caminho Fonte: Prólogo Ativo A exemplo do que ocorreu há décadas em alguns países
+                      da Europa e América do Norte, o uso da bicicleta como alternativa para o transporte.9 Dicas para pedalar com mais segurança Vai sair para pedalar pelas ciclovias ou no trânsito da cidade ?
+                      Aprenda a usar o pedal defensivo e olho no caminho Fonte: Prólogo Ativo A exemplo do que ocorreu há décadas em alguns países
+                      da Europa e América do Norte, o uso da bicicleta como alternativa para o transporte
+                      urbano vem crescendo no Brasil nos últimos anos.  O trânsito caótico de automóveis nos centros urbanos e o caráter sustentável...</p>
+
+              <h4 id="item3">Competição</h4>
+              <p>9 Dicas para pedalar com mais segurança Vai sair para pedalar pelas ciclovias ou no trânsito da cidade ?
+                Aprenda a usar o pedal defensivo e olho no caminho Fonte: Prólogo Ativo A exemplo do que ocorreu há décadas em alguns países
+                da Europa e América do Norte, o uso da bicicleta como alternativa para o transporte
+                urbano vem crescendo no Brasil nos últimos anos.  O trânsito caótico de automóveis nos centros urbanos e o caráter sustentável...</p>
+          </div>
+      </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+  {% endblock muda%}

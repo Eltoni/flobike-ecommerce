@@ -1,0 +1,94 @@
+{% extends "app/base.html"%}
+{% block muda %}
+
+<div class="jumbotron jumbotron-fluid">
+		<div class="row my-2">
+				<div class="col-12 text-center my5">
+						<h2 class="display-5">PRODUTOS LOJA-BIKE</h2>
+
+						<div class="container">
+								<div class="col-7 ">
+									<ul>
+											<li class="separador"></li>
+
+									</ul>
+
+								</div>
+						</div>
+				</div>
+		</div>
+</div>
+<div class="container">
+
+
+
+
+
+
+<div class="row">
+	<div class="col-2">
+		<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+			<p>Categorias</p>
+			{% if not categoria %}
+			<a class="nav-link active"  href="{% url 'loja:lista_produto' %}" >Todos</a>
+			{% else %}
+			<a class="nav-link"  href="{% url 'loja:lista_produto' %}" >Todos</a>
+			 {% endif %}
+			{% for c in categorias %}
+			<a {% if categoria.slug == c.slug %} class="nav-link active" {% else %} class="nav-link" {% endif %} href="{{ c.get_absolute_url  }}" role="tab" aria-controls="v-pills-home" aria-selected="true">{{ c.nome }}</a>
+			{% endfor %}
+		</div>
+	</div>
+	<br>
+
+	<div class="col-10">
+		<div class="tab-content" id="v-pills-tabContent">
+			<h1>{% if categoria %}
+						{{ categoria.nome }}
+					{% else %}
+					 Todos os Produtos
+					  {% endif %}</h1>
+
+			<div class="tab-pane fade show active" id="todos" role="tabpanel" aria-labelledby="v-pills-home-tab">
+								<div class="row mb-3">
+									{% for item in produto %}
+									<div class="col-sm-6 col-md-4">
+										<div class="card" style="width: 18rem;">
+											<img class="card-img-top" src="{{ item.imagem.url }}" alt="Card image cap">
+											<div class="card-body">
+												<h5 class="card-title">{{ item.nome }}</h5>
+												<p class="card-text">{{ item.descricao }}</p>
+												<a href="{{ item.get_absolute_url }}" class="btn btn-success">Ver Produto</a>
+												<a href="#" class="btn btn-primary">R$ {{ item.preco }}</a>
+											</div>
+										</div>
+
+									</div>
+										{% endfor %}
+								</div>
+
+
+			</div>
+
+
+		</div>
+		</div>
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+{% endblock muda %}

@@ -1,0 +1,83 @@
+{% extends "app/base.html" %}
+{% block muda %}
+{% load static %}
+<div class="jumbotron jumbotron-fluid">
+		<div class="row my-2">
+				<div class="col-12 text-center my5">
+						<h2 class="display-5">Produtos Adicionado no Carrinho</h2>
+
+						<div class="container">
+								<div class="col-7 ">
+									<ul>
+											<li class="separador"></li>
+
+									</ul>
+
+								</div>
+						</div>
+				</div>
+		</div>
+</div>
+
+<div class="container ">
+<table class="table table-sm">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Imagem</th>
+      <th scope="col">Produto</th>
+      <th scope="col">Quantitdade</th>
+      <th scope="col">Remover</th>
+      <th scope="col">Preço Unitário</th>
+      <th scope="col">Preço</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in cart %}
+    {% with produto=item.produto %}
+    <tr>
+      <th scope="row">#</th>
+
+      <td>
+      <a href="{{ produto.get_absolute_url }}">
+      <img height="50px" src="{% if produto.imagem %}{{ produto.imagem.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
+      </a>
+      </td>
+      <td>{{ produto.nome }}</td>
+
+      <td>
+          <form action="{% url "cart:cart_add" produto.id %}" method="post">
+        {{ item.update_quantity_form.quantidade }}
+        {{ item.update_quantity_form.update }}
+        <input class="btn btn-primary"type="submit" value="Update">
+        {% csrf_token %}
+        </form>
+    </td>
+
+    <td><a href="{% url "cart:cart_remove" produto.id %}"class="btn btn-danger">Remove</a></td>
+    <td class="num">R${{ item.preco }}</td>
+    <td class="num">R${{ item.total_preco }}</td>
+    </tr>
+    {% endwith %}
+    {% endfor %}
+
+
+  </tbody>
+
+
+
+</table>
+</div>
+<hr>
+<div class="container ">
+  <div class="jumbotron">
+
+  Total:
+  <a href="#" class="btn btn-primary">R$ {{ cart.get_total_price }}</a>
+  </div>
+</div>
+<p class="text-right">
+<a href="{% url "loja:lista_produto" %}" class="btn btn-primary">Continue Comprando</a>
+<a href="{% url "orders:order_create" %}" class="btn btn-primary mr-5">Pagar</a>
+</p>
+{% endblock muda%}

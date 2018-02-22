@@ -1,0 +1,67 @@
+{% extends "app/base.html" %}
+{% block muda %}
+{% load static %}
+
+<h1>Informe Seus Dados</h1>
+<div class="container ">
+  <div class="jumbotron">
+<div class="order-info">
+<h3>Relação das Compras</h3>
+<ul>
+{% for item in cart %}
+<li>
+{{ item.quantidade }}x {{ item.produto.nome }}
+<span> R$   {{ item.total_preco }}</span>
+</li>
+{% endfor %}
+</ul>
+
+
+
+  Total:
+  <a href="#" class="btn btn-primary">R$ {{ cart.get_total_price }}</a>
+  </div>
+</div>
+</div>
+
+
+
+
+<div class="container">
+
+    <div class="row mb-5">
+
+
+
+            <div class="row justify-content-sm-center ">
+              <div class="container ">
+
+              <div class="row  mr-5 ">
+                  <div class="col-sm-8 col-md-30 col-lg-8 ">
+                      <form action="." method="post">
+                        {% csrf_token %}
+                          {{ form.as_p}}
+                          <div class="form-row justify-content-center">
+                              <div class="col-sm-12">
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                                <!--Botao do popover
+                                <a class="btn btn-secondary ml-2" tabindex="0" role="button"
+                                data-toggle="popover" data-placement="right" data-trigger="focus"
+                                title="Ajudando Vocẽ" data-content="ETYDVhsgvjsdagvfgesdkfgsdjhvbhj">
+                                  Ajuda
+                                </a>-->
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+
+          </div>
+
+            </div>
+      </div>
+
+
+            </div>
+
+          </div>
+{% endblock %}

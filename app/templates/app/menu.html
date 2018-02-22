@@ -1,0 +1,63 @@
+<!--<nav class="navbar (Deixa o menu fixado "navbar-fixed-top")
+(expandir totalmente = "navbar-expand-lg") (light=deixa as letras cinza "navbar-light")
+(bg = define a largura do navbar / ligth =deixa a navbar cinza  "bg-light""> -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-info">
+   <div class="container">
+      <a class="navbar-brand h1 mb-0" href="{% url 'app:index' %}"><strong><i class="fa fa-bicycle text-black fa-fw" aria-hidden="true"></i> FloBike </strong></a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSite">
+        <!-- Ul alinhado para a esquerda "mr-auto"-->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+             <a class="nav-link" href="{% url 'app:index' %}"> <i class="fa fa-home fa-fw" aria-hidden="true"></i>Início</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#"> <i class="fa fa-book fa-fw" aria-hidden="true"></i>Portifólio </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'loja:lista_produto' %}"> <i class="fa fa-paper-plane fa-fw" aria-hidden="true"></i>Produtos </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'inscrever:inscrito' %}"> <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>Inscreva-se </a>
+            </li>
+
+            <!---<li class="nav-item">
+              <a class="nav-link" href="#"> Trabalhe Conosco </a>
+            </li>-->
+
+
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'app:contato' %}"> <i class="fa fa-contao fa-fw" aria-hidden="true"></i>Contatos </a>
+            </li>
+        </ul>
+        <!-- Ul alinhado para a Direita "ml-auto"-->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <!-- Link principal do dropdown-->
+              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop"> <i class="fa fa-plus fa=fw" aria-hidden="true"></i>Mais Sobre </a>
+              <!-- Itens menu do dropdown-->
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="{% url 'app:empresa' %}"><i class="fa fa-university fa-fw" aria-hidden="true"></i>Missões,Visões,Valores</a>
+                <a class="dropdown-item" href="{% url 'app:empresa' %}"><i class="fa fa-hand-paper-o fa-fw" aria-hidden="true"></i>Pratocinadores</a>
+                <a class="dropdown-item" href="{% url 'app:empresa' %}"><i class="fa fa-bars fa-fw" aria-hidden="true"></i>História da Empresa</a>
+                <a class="dropdown-item" href="{% url 'app:empresa' %}"><i class="fa fa-bars fa-fw" aria-hidden="true"></i>História da Bicicleta</a>
+              </div>
+
+            </li>
+        </ul>
+      <!-- Barr de pesquisa|||||
+        <form class="form-inline">
+          <input class="form-control ml-5 mr-2" type="search" placeholder="Buscar ...">
+          #outline invert o botão#
+          <button class="btn btn-outline-light" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </form>-->
+
+      </div>
+  </div>
+</nav>
