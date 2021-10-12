@@ -60,8 +60,8 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 # django-paypal settings
-PAYPAL_RECEIVER_EMAIL = 'eltoni.guimaraes@gmail.com'
-#PAYPAL_RECEIVER_PASSWORD='elton1guimaraes'
+PAYPAL_RECEIVER_EMAIL = 'Seu email  pay pal'
+#PAYPAL_RECEIVER_PASSWORD='sua senha pay pal'
 PAYPAL_TEST = True
 # Application definition
 
